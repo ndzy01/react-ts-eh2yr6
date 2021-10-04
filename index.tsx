@@ -4,11 +4,9 @@ import { render } from 'react-dom';
 
 function useCounter(initialState = 0) {
   let [count, setCount] = useState(initialState);
-  let decrement1 = useCallback(() => setCount(count - 1), []);
-  let increment1 = useCallback(() => setCount(count + 1), []);
   let decrement = () => setCount(count - 1);
   let increment = () => setCount(count + 1);
-  return { count, decrement, increment, decrement1, increment1 };
+  return { count, decrement, increment };
 }
 
 let Counter = createContainer(useCounter);
@@ -19,9 +17,9 @@ function CounterDisplay() {
   let counter = Counter.useContainer();
   return (
     <div>
-      <button onClick={counter.decrement1}>-</button>
+      <button onClick={counter.decrement}>-</button>
       <span>{counter.count}</span>
-      <button onClick={counter.increment1}>+</button>
+      <button onClick={counter.increment}>+</button>
     </div>
   );
 }
