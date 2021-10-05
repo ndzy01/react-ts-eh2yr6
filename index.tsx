@@ -4,7 +4,7 @@ import { createContainer } from 'unstated-next';
 import { render } from 'react-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import IHttp from './src/http';
+import IHttp from './src/IHttp';
 
 const markdown = `Just a link: https://reactjs.com.`;
 
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <Counter.Provider>
-      <IHttp />
+      {/* <IHttp /> */}
       <T1 />
       <CounterDisplay />
       <Counter.Provider initialState={2}>
