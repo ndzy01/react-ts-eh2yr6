@@ -35,7 +35,7 @@ function App() {
 
   return (
     <Counter.Provider>
-      {/* <IHttp /> */}
+      <IHttp />
       <T1 />
       <CounterDisplay />
       <Counter.Provider initialState={2}>
