@@ -35,6 +35,7 @@ function App() {
 
   return (
     <Counter.Provider>
+      <IHttp />
       <T1 />
       <CounterDisplay />
       <Counter.Provider initialState={2}>
@@ -48,5 +49,4 @@ function App() {
   );
 }
 
-// render(<App />, document.getElementById('root'));
-render(<IHttp />, document.getElementById('http'));
+render(<App />, document.getElementById('root'));
