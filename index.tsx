@@ -4,6 +4,7 @@ import { createContainer } from 'unstated-next';
 import { render } from 'react-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import IHttp from './src/http';
 
 const markdown = `Just a link: https://reactjs.com.`;
 
@@ -47,4 +48,5 @@ function App() {
   );
 }
 
-render(<App />, document.getElementById('root'));
+// render(<App />, document.getElementById('root'));
+render(<IHttp />, document.getElementById('http'));
