@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { useReq } from '../utils/http';
+
+const IHttp = () => {
+  // const { run } = useReq();
+  return <div>请求</div>;
+};
+
+// export default IHttp;
 
 const markdown = `
 ## 插件
